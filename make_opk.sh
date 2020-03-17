@@ -24,7 +24,7 @@ FLIST="${FLIST} ohboy.png"
 FLIST="${FLIST} etc"
 
 rm -f ${OPK_NAME}
-mksquashfs ${FLIST} ${OPK_NAME} -all-root -no-xattrs -noappend -no-exports
+mksquashfs ${FLIST} ${OPK_NAME} -all-root -no-xattrs -noappend -no-exports -wildcards -e '... *.bmp'
 
 cat default.gcw0.desktop
 rm -f default.gcw0.desktop
