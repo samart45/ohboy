@@ -1930,7 +1930,11 @@ void ev_poll()
 #endif
 #ifdef DINGOO_OPENDINGUX
 #ifdef GCWZERO
+#ifdef PG2
+			} else if(event.key.keysym.sym==SDLK_RCTRL){
+#else
 			} else if(event.key.keysym.sym==SDLK_HOME){
+#endif
 				dvolume = 0;
 				osd_persist = 0;
 				hw.pad = 0;
